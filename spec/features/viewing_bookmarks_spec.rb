@@ -1,8 +1,12 @@
-feature 'Viewing Bookmarks' do
-    scenario 'A user can see bookmarks' do
-        visit('/your_bookmarks')
-        expect(page).to have_content "www.eBay.co.uk"
-        expect(page).to have_content "www.Facebook.co.uk"
-        expect(page).to have_content "www.Instagram.co.uk"
+# Inside ./spec/bookmark_spec.rb
+
+describe '.all' do
+    it 'returns a list of bookmarks' do
+      bookmarks = Bookmark.all
+  
+      expect(bookmarks).to include "http://www.askjeeves.com"
+      expect(bookmarks).to include "http://www.twitter.com"
+      expect(bookmarks).to include "http://www.google.com"
+      expect(bookmarks).to include "http://www.makersacademy.com"
     end
-end
+  end
