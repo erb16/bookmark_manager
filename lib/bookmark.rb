@@ -13,7 +13,7 @@ class Bookmark
     result.map { |bookmark| bookmark['url'] }
   end
 
-  def self.create(website:)
+  def self.create(website)
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'bookmark_manager_tests')
     else
