@@ -10,9 +10,9 @@ feature 'Viewing bookmarks' do
     # connection.exec("INSERT INTO bookmarks VALUES(2, 'http://www.destroyallsoftware.com');")
     # connection.exec("INSERT INTO bookmarks VALUES(3, 'http://www.google.com');")
 
-    Bookmark.create("http://www.makersacademy.com")
-    Bookmark.create("http://www.destroyallsoftware.com")
-    Bookmark.create("http://www.google.com")
+    Bookmark.create(website: "http://www.makersacademy.com")
+    Bookmark.create(website: "http://www.destroyallsoftware.com")
+    Bookmark.create(website: "http://www.google.com")
     visit('/bookmarks')
 
     expect(page).to have_content "http://www.makersacademy.com"

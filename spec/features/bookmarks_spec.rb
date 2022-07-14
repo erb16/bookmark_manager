@@ -4,12 +4,3 @@ feature 'Viewing bookmarks' do
         expect(page).to have_content "Bookmark Manager"
     end
 end
-
-describe '.create' do
-    it 'creates a new bookmark' do
-      Bookmark.create('http://www.example.org')
-  
-      expect(Bookmark.all).to include 'http://www.example.org'
-    end
-  end
-  
