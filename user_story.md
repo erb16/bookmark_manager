@@ -22,3 +22,7 @@ see
 bookmark/website address >>add>> list
 
 list >>see>> user
+
+As a user,
+so that I can save my favourite websites in one place,
+I would like to be able to add a website to my bookmarks
